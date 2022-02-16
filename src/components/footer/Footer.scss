@@ -1,0 +1,67 @@
+@use "../../scss/" as *;
+
+.footer {
+  position: relative;
+
+  padding: 30px 15px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  &__content {
+    max-width: 1000px;
+
+    &__logo {
+      @include flex(center, center);
+    }
+    &__menus {
+      @include flex(center, space-evenly);
+
+      @include mobile {
+        //   display: grid;
+        //   grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &__menu {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      margin-top: 1rem;
+
+      font-size: 16px;
+      font-weight: 600;
+
+      & > a {
+        padding: 8px 0;
+      }
+    }
+  }
+
+  &__contact-info {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      span {
+        text-align: center;
+      }
+    }
+    a {
+      padding: 0 10px;
+    }
+  }
+
+  &__contact-link {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+}

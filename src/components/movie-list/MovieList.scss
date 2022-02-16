@@ -1,0 +1,52 @@
+@use "../../scss/" as *;
+
+.movie-list {
+  .swiper-slide {
+    width: 20%;
+
+    & > img {
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    @include tablet {
+      width: 30%;
+    }
+
+    @include mobile {
+      width: 40%;
+    }
+  }
+
+  &--watches {
+    height: 100vh;
+    overflow: hidden scroll;
+
+    .movie-wrapper {
+      margin: 20px 0;
+      padding: 0 20px;
+
+      @include tablet {
+        width: 200px;
+      }
+      @include mobile {
+        width: 200px;
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--watches::-webkit-scrollbar {
+    display: none;
+  }
+}
